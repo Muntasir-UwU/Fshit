@@ -1,0 +1,170 @@
+*{
+  text-transform: uppercase;
+}
+.App {
+  text-align: center;
+}
+/* RSVPForm.css */
+.rsvp-wrapper {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f2f4f8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, sans-serif;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #1a181b;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #dcdfe3;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(0);
+}
+button:nth-of-type(1) {
+  background: #00a8e8;
+}
+button:nth-of-type(2) {
+  background: #ff6f61;
+}
+
+.counters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.counter {
+  background: #ffffff;
+  border: 1px solid #dcdfe3;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.count {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a181b;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0.5rem;
+  gap: 5px;
+}
+
+li {
+  font-size: 0.9rem;
+  color: #1a181b;
+ 
+}
+.infos{
+
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px;
+}
+.ininfo, .ingo {
+  max-width: 100%;
+
+  margin: 0rem 0rem;
+  min-height: 200px;
+  background: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  border: 1px solid #dcdfe3;
+  border-radius: 8px;
+  padding: 10px;
+
+  flex-wrap: wrap;
+  overflow: hidden; /* Prevents spillover */
+}
+.warning {
+  color: #ff4d4f;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.ininfo ul,
+.ingo ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.ininfo li,
+.ingo li {
+  font-size: 0.9rem;
+  color: #1a181b;
+  white-space: nowrap;  /* Keeps full names together */
+}
+@media (max-width: 540px) {
+  /* shrink outer spacing a bit */
+  .rsvp-wrapper {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  /* stack input and buttons vertically for thumb-friendly tapping */
+  .input-row {
+    flex-direction: column;
+  }
+
+  .input-row button {
+    width: 100%;
+  }
+
+  /* counters: keep two in a row even on very small screens */
+  .counters {
+    
+  }
+}
